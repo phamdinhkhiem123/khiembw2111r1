@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     .dotted {
+        border-style: dotted;
+     }
+     .dashed {
+        border-style: dashed;
+     }
+     .solid {
+         border-style: solid;
+     }
+    .double {
+        border-style:double
+    }
+    .groove{
+        border-style: groove;
+    }
+    .ridge {
+        border-style: ridge;
+    }
+    .inset {
+        border-style: inset;
+    }
+    .outset {
+        border-style: outset
+    } 
+    .none {
+        border-style: none;
+    }
+    .hidden {
+        border-style: hidden;
+    }
+    .mix {
+        border-style: dotted solid;
+    }
+    .dott {
+        border-style:solid;
+        border-width: 5px;
+        
+    }
+    .color {
+        border-style: double;
+        border-left: 5px;
+        border-color: aqua;
+    }
+    .where {
+        border-bottom-style: dotted;
+    }
+    </style>
+</head>
+<body>
+    <div>
+    <h1>thực hiện những thẻ viền cơ bản của css</h1>
+    <p class="dotted">đây là thuộc tính làm cho viền trở thành cách dấu chấm</p>
+    <p class=dashed>đây là thuộc tính làm cho viền trở thành các nét đứt</p>
+    <p class="solid">đây là thuộc tính làm cho đường viền trở thành các nét liền đơn</p>
+    <P class="double">như solid nma nó là nét đôi</P>
+    <p class="groove">đường viền dạng khung ảnh chìm</p>
+    <p class="ridge">đường viền dạng xẻ rãnh</p>
+    <p class="inset">đường viền dạng gờ nổi</p>
+    <p class="outset">đường viền dạng khung ảnh nổi</p>
+    <p class="none">ko có đường viền</p>
+    <p class="hidden">đường viền ẩn</p>
+    <p class="mix">đường viền hỗn hợp</p>
+  <h1>khi dùng thẻ mix khai báo từ trái qua phải lần lượt sẽ là hàng dọc rồi mới đến hàng ngang </h1>
+    </div>
+    <div>
+      <h1>border-with là một loại thuộc tính cho phép can thiệp vào độ đậm của đường viền sẽ đi chung với border</h1>
+       <p class="dott">đây là khiêm đẹp trai</p>
+    </div>
+    <div>
+        <h1>border-color là một thuộc tính cho phéo biến đổi màu của 4 đường viền bao xung quanh</h1>
+        <p class="color">khiêm đẹp trai vlin</p>
+    </div>
+    <div>
+        <h1>ta cũng có thể tùy ý muốn chỉnh sửa thứ dc chỉ định cụ thể bằng cách cho thêm thuộc tính top(viền trên) right(viền phải) left(viền trái) bottom(viền dưới)</h1>
+        <p class="where">khiem ơi sao đẹp trai vậy</p>
+    </div>
+    <div>
+        <h1>có thể rút gọn bằng các thuộc tính sau đây</h1>
+         <h1>border: 5px solid red</h1>
+         <br> ở trên ta thấy solid là kiểu đường viền border là dùng chung cho 
+         cả 3 loại 5px là khai báo của độ đâmh của border-width
+         còn red là khai báo màu của border-color vậy từ đây ta
+         có thể rút ra dc là cta sẽ khai báo lần lượt
+         theo kích-dạng-màu.
+    </div>
+</body>
+</html>
