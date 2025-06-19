@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Photo Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      text-align: center;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    figure {
+      border: 2px solid #ccc;
+      padding: 10px;
+      background-color: white;
+      transition: border-color 0.3s;
+    }
+    figure:focus {
+      border-color: blue;
+      outline: none;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+    figcaption {
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body onload="initGallery()">
+
+  <h1>My Accessible Photo Gallery</h1>
+  <div class="gallery" id="gallery">
+    <figure>
+      <img src="https://picsum.photos/id/1015/300/200" alt="Mountain landscape" />
+      <figcaption>Mountain View</figcaption>
+    </figure>
+    <figure>
+      <img src="https://picsum.photos/id/1025/300/200" alt="Cute dog close-up" />
+      <figcaption>Dog Portrait</figcaption>
+    </figure>
+    <figure>
+      <img src="https://picsum.photos/id/1003/300/200" alt="City skyline" />
+      <figcaption>City Lights</figcaption>
+    </figure>
+    <figure>
+      <img src="https://picsum.photos/id/1016/300/200" alt="Foggy forest" />
+      <figcaption>Forest Walk</figcaption>
+    </figure>
+    <figure>
+      <img src="https://picsum.photos/id/1005/300/200" alt="Colorful balloons" />
+      <figcaption>Balloon Festival</figcaption>
+    </figure>
+    <figure>
+      <img src="https://picsum.photos/id/1011/300/200" alt="Beach sunset" />
+      <figcaption>Sunset at the Beach</figcaption>
+    </figure>
+  </div>
+
+  <script>
+    function initGallery() {
+      console.log("Page loaded. Initializing gallery...");
+
+      const figures = document.querySelectorAll("figure");
+      for (let i = 0; i < figures.length; i++) {
+        figures[i].setAttribute("tabindex", "0");
+
+        figures[i].addEventListener("mouseover", function () {
+          this.style.borderColor = "green";
+          console.log("Mouse over image " + (i + 1));
+        });
+
+        figures[i].addEventListener("mouseleave", function () {
+          this.style.borderColor = "#ccc";
+        });
+
+        figures[i].addEventListener("focus", function () {
+          this.style.borderColor = "blue";
+          console.log("Focused on image " + (i + 1));
+        });
+
+        figures[i].addEventListener("blur", function () {
+          this.style.borderColor = "#ccc";
+        });
+      }
+    }
+  </script>
+
+</body>
+</html>
